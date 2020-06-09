@@ -8,13 +8,43 @@
 
     <form>
         <label>Nombre del Local</label>
-        <input type= "text">
+        <input type="text">
         </br>
         <label> Descripcion </label>
         <textarea> </textarea>
         <input type="file" id="img" name="img" accept="image/*">
         <input type="submit" id="button" value="Guardar" />
     </form>
+
+    <script>
+        class local {
+            constructor(id, name, description, image) {
+                this.id = id;
+                this.name = name;
+                this.description = description;
+                this.img = image
+            }
+        }
+
+
+
+        listaLocales = [];
+
+        var nuevoLocal = new local(1,"Restaurante","VendenComida", 1);
+
+        listaLocales.push(nuevoLocal);
+
+        alert(listaLocales.length);
+
+
+        
+
+    
+
+
+
+    </script>
+
 
 </body>
 

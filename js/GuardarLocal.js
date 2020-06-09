@@ -6,5 +6,7 @@ class local{
         this.img;
     }
 
-    
+    CrearLocal(){
+
+    }
 }
