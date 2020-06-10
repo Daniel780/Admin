@@ -22,60 +22,36 @@
 </head>
 
 <body>
-<h1> Crear Local </h1>
+    <h1> Crear Local </h1>
     <div class="container">
         <div class="md-form">
-            <label>Nombre del Local</label>
-            <input type="text" class="form-control">
-            </br>
-            <label> Descripcion </label>
-            <textarea class="form-control"> </textarea>
-            </br>
 
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <form onsubmit="guardarLocal()">
+
+
+                <label>Nombre del Local</label>
+                <input type="text" class="form-control">
+                </br>
+                <label> Descripcion </label>
+                <textarea class="form-control"> </textarea>
+                </br>
+
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01" accept="image/*">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
                 </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01"
-                        aria-describedby="inputGroupFileAddon01" accept="image/*">
-                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                </div>
-            </div>
-        </br>
-            <input type="submit" class="btn btn-success" id="button" value="Guardar" />
+                </br>
+                <input type="submit" class="btn btn-success" id="button" value="Guardar" />
+            </form>
         </div>
 
     </div>
-
-
-    <script>
-        class local {
-            constructor(id, name, description, image) {
-                this.id = id;
-                this.name = name;
-                this.description = description;
-                this.img = image
-            }
-        }
-
-
-
-        listaLocales = [];
-
-        var nuevoLocal = new local(1, "Restaurante", "VendenComida", 1);
-
-        listaLocales.push(nuevoLocal);
-
-
-
-
-
-
-
-
-    </script>
-
 
 </body>
 
