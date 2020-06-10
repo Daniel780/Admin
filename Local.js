@@ -10,10 +10,21 @@ class local {
 
 listaLocales = [];
 
-var nuevoLocal = new local(1, "Restaurante", "VendenComida", 1);
+var nuevoLocal = new local(1, "Restaurante", "VendenComida", "ee.PNG");
 
 listaLocales.push(nuevoLocal);
 
 function mostrarDatos(id){
-    alert(listaLocales[0].name);
+    var datos = "";
+    datos += listaLocales[id].name + "<br>";
+    datos += listaLocales[id].description + "<br>";
+    datos += "<img src =" + listaLocales[id].img +"> " + "<br>";
+    return datos;
+}
+
+function mostarLocales(){
+    var i;
+    for(i = 0; i < listaLocales.lenght; i++){
+        mostrarDatos(i);
+    }
 }
