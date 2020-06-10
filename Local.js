@@ -27,4 +27,13 @@ function mostarLocales(){
     for(i = 0; i < listaLocales.lenght; i++){
         mostrarDatos(i);
     }
-}
+} 
+
+$(document).ready(function(){
+    $("#localForm").submit(function(){
+    var name = document.getElementById("localName").value;
+    var description= document.getElementById("localDescription").value;
+    var img = document.getElementById("localPhoto").value;
+    
+    });
+  });
