@@ -59,4 +59,4 @@ $(document).ready(function(){
     var LocalJSON = JSON.stringify(LocalTemporal);
     localStorage.setItem(LocalTemporal.name, LocalJSON);
     alert(localStorage.getItem(LocalTemporal.name));
-  }
+  } 
