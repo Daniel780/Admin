@@ -8,10 +8,26 @@ class local {
 
 
 listaLocales = [];
+ 
+//Metodo que recibe los elementos del Form
+$(document).ready(function(){
+    $("#localForm").submit(function(){
+    var name = document.getElementById("localName").value;
+    var description= document.getElementById("localDescription").value;
+    var img = document.getElementById("localPhoto").value;
+    guardarLocal(name, description,img);
+    });
+  });
 
-var nuevoLocal = new local("Restaurante", "VendenComida", "ee.PNG");
+  //GuardaLocal en un LocalStorage, asi almacenaremos los locales
+  function guardarLocal(name, description, photo){
+    var LocalTemporal = new local(name, description, photo);
+    var LocalJSON = JSON.stringify(LocalTemporal);
+    localStorage.setItem(LocalTemporal.name, LocalJSON);
+    alert(localStorage.getItem(LocalTemporal.name));
+  }
 
-listaLocales.push(nuevoLocal);
+
 
 function mostrarDatos(id){
     var datos = "";
@@ -28,20 +44,4 @@ function mostarLocales(){
     }
 } 
 
-var contadorLocales=0;
 
-$(document).ready(function(){
-    $("#localForm").submit(function(){
-    var name = document.getElementById("localName").value;
-    var description= document.getElementById("localDescription").value;
-    var img = document.getElementById("localPhoto").value;
-    guardarLocal(name, description,img);
-    });
-  });
-
-  function guardarLocal(name, description, photo){
-    var LocalTemporal = new local(name, description, photo);
-    var LocalJSON = JSON.stringify(LocalTemporal);
-    localStorage.setItem(LocalTemporal.name, LocalJSON);
-    alert(localStorage.getItem(LocalTemporal.name));
-  }
