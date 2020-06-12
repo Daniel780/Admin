@@ -1,6 +1,5 @@
 class local {
-    constructor(id, name, description, image) {
-        this.id = id;
+    constructor(name, description, image) {
         this.name = name;
         this.description = description;
         this.img = image
@@ -10,7 +9,7 @@ class local {
 
 listaLocales = [];
 
-var nuevoLocal = new local(1, "Restaurante", "VendenComida", "ee.PNG");
+var nuevoLocal = new local("Restaurante", "VendenComida", "ee.PNG");
 
 listaLocales.push(nuevoLocal);
 
@@ -29,11 +28,20 @@ function mostarLocales(){
     }
 } 
 
+var contadorLocales=0;
+
 $(document).ready(function(){
     $("#localForm").submit(function(){
     var name = document.getElementById("localName").value;
     var description= document.getElementById("localDescription").value;
     var img = document.getElementById("localPhoto").value;
-    
+    guardarLocal(name, description,img);
     });
   });
+
+  function guardarLocal(name, description, photo){
+    var LocalTemporal = new local(name, description, photo);
+    var LocalJSON = JSON.stringify(LocalTemporal);
+    localStorage.setItem(LocalTemporal.name, LocalJSON);
+    alert(localStorage.getItem(LocalTemporal.name));
+  }
