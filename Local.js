@@ -15,10 +15,25 @@ listaLocales.push(nuevoLocal);
 
 function mostrarDatos(id){
     var datos = "";
-    datos += listaLocales[id].name + "<br>";
-    datos += listaLocales[id].description + "<br>";
-    datos += "<img src =" + listaLocales[id].img +"> " + "<br>";
+    datos += listaLocales[id].name + "<li>";
+    datos += listaLocales[id].description + "<li>";
+    datos += "<img src =" + listaLocales[id].img +"> " + "<li>";
     return datos;
+}
+function getName(id){
+	var datos="";
+	datos += listaLocales[id].name + "<br>";
+	 return datos;
+}
+function getDescription(id){
+	var datos="";
+	datos += listaLocales[id].description + "<br>";
+	 return datos;
+}
+function getImg(id){
+	var datos="";
+	datos += "<img src =" + listaLocales[id].img +"> " + "<br>";
+	 return datos;
 }
 
 function mostarLocales(){
