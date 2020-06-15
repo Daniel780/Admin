@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
+<head>
         <title>Mostrar Local</title>
     
         <!-- CSS only -->
@@ -21,36 +21,36 @@
             crossorigin="anonymous"></script>
     
     
-    </head>
+</head>
 
 
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">FoodSearch</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-	  </ul>
-	  <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-	  </div>
+	<a class="navbar-brand" href="#">FoodSearch</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
 </nav>
 
 
-    <script type="text/javascript" src="Local.js"></script>
+<script type="text/javascript" src="Local.js"></script>
 
 <!-- Page Content -->
 	<div class="container">
 		<h1> Local </h1>
-				
+	
 		<div class="row">
 			<div class="col-sm-4">
 			
@@ -58,12 +58,12 @@
 					<div class="card-body">
 				
 					<h5 class="card-title"><form id = "demo2"></form>
-					<script>
+						<script>
 						document.getElementById("demo2").innerHTML = getName(0);
 						</script></h5>
 				
 					<p class="card-text"><form id = "demo3"></form>
-					<script>
+						<script>
 						document.getElementById("demo3").innerHTML = getDescription(0);
 						</script></p>
 					</div>
@@ -88,14 +88,14 @@
                     <h4>Agregar calificacion</h4>
                     <div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label> </div>
                     <div class="text-center mt-4"> <button class="btn btn-success send px-5">Enviar <i class="fa fa-long-arrow-right ml-1"></i></button> </div>
-				</div>
-				</div>
-	</div>
+                </div>
+			</div>
+		</div>
 	</div>
 			
-				
-    </body>
+			
+</body>
     
-    </html>
+</html>
 
 
