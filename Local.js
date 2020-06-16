@@ -60,3 +60,12 @@ function mostarLocales(){
 
 
 
+$(document).ready(function(){
+    $("#LocalCalForm").submit(function(){
+    var Calification = document.getElementById("LocalCal").value;
+    var comment = document.getElementById("localComentario").value;
+    alert(Calification + " " + comment);
+    });
+  });
+
+  
