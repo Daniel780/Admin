@@ -18,18 +18,17 @@
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous"></script>
     
-    
+        <script src="ImgTest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     </head>
 
-    <script type="text/javascript" src="Local.js"></script>
+    
 
     <body>
         <form id="imgur">
             <input type="file" class="imgur" accept="image/*" data-max-size="5000" />
         </form>
         
-        
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
         <script>
             $("document").ready(function () {
         
@@ -68,7 +67,11 @@
                                 console.log("Uploading");
                             },
                             success: function (res) {
+                                
                                 console.log(res.data.link);
+                                alert("sdfgwegfg");
+                                addImage(res.data.link);
+                                $('body').append('<img src="' + getImg(0) + '" />');
                                 $('body').append('<img src="' + res.data.link + '" />');
                             },
                             error: function () {
@@ -84,6 +87,4 @@
         </script>
     </body>
     
-    </html>
-
-
+</html>
