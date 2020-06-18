@@ -37,37 +37,6 @@ function guardarLocal(name, description, photo) {
 }
 
 
-/*
-function mostrarDatos(id){
-    var datos = "";
-    datos += listaLocales[id].name + "<li>";
-    datos += listaLocales[id].description + "<li>";
-    datos += "<img src =" + listaLocales[id].img +"> " + "<li>";
-    return datos;
-}
-function getName(id){
-	var datos="";
-	datos += listaLocales[id].name + "<br>";
-	 return datos;
-}
-function getDescription(id){
-	var datos="";
-	datos += listaLocales[id].description + "<br>";
-	 return datos;
-}
-function getImg(id){
-	var datos="";
-	datos += "<img src =" + listaLocales[id].img +"> " + "<br>";
-	 return datos;
-}*/
-
-function mostarLocales() {
-  var i;
-  for (i = 0; i < listaLocales.lenght; i++) {
-    mostrarDatos(i);
-  }
-}
-
 function GuardarCalificación(localKey, cal, comm) {
   JSONlocal = localStorage.getItem(localKey);
   localTemp = JSON.parse(JSONlocal);
@@ -78,6 +47,7 @@ function GuardarCalificación(localKey, cal, comm) {
 
 }
 
+// Guardar Calificaciones y comentarios
 $(document).ready(function () {
   $("#LocalCalForm").submit(function () {
     var Calification = document.getElementById("LocalCal").value;
