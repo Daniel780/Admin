@@ -37,7 +37,7 @@ function guardarLocal(name, description, photo) {
 }
 
 
-function GuardarCalificación(localKey, cal, comm) {
+function GuardarCalificacion(localKey, cal, comm) {
   JSONlocal = localStorage.getItem(localKey);
   localTemp = JSON.parse(JSONlocal);
   localCal = new localCalificado(localTemp.name, localTemp.description, localTemp.img, cal, comm);
@@ -47,12 +47,12 @@ function GuardarCalificación(localKey, cal, comm) {
 
 }
 
-// Guardar Calificaciones y comentarios
+// Guardar
 $(document).ready(function () {
   $("#LocalCalForm").submit(function () {
     var Calification = document.getElementById("LocalCal").value;
     var comment = document.getElementById("localComentario").value;
-    GuardarCalificación("Camilo", Calification, comment);
+    GuardarCalificacion("Camilo", Calification, comment);
   });
 });
 
