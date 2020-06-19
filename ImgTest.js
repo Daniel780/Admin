@@ -1,10 +1,9 @@
 class ImgTest {
-    constructor(name) {
-        this.name = name;
-        this.imgs = [];
-    }
+    constructor() {
+    }   
 }
 
+imgs = [];
 
 function addImg(img){
     alert("subiendo imagen");
