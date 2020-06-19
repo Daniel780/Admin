@@ -6,7 +6,6 @@ class ImgTest {
 imgs = [];
 
 function addImg(img){
-    alert("subiendo imagen");
     imgs.push(img);
 }
 

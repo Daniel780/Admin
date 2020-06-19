@@ -17,6 +17,16 @@ class localCalificado {
 }
 
 listaLocales = [];
+imgs = [];
+
+function addImg(img){
+    imgs.push(img);
+}
+
+function getImg(num){
+    return imgs[num];
+}
+
 //Metodo que recibe los elementos del Form local
 $(document).ready(function () {
   $("#localForm").submit(function () {
