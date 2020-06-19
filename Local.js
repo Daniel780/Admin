@@ -17,7 +17,6 @@ class localCalificado {
 }
 
 listaLocales = [];
-
 //Metodo que recibe los elementos del Form local
 $(document).ready(function () {
   $("#localForm").submit(function () {
