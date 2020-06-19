@@ -49,7 +49,9 @@ function mostrarIndex(){
 	var l = localStorage.length;
 	var o ="";
 	for(i=0; i < l;i++){
-		o += '<a href="#" class="list-group-item">';
+		o += '<a href=';
+		o+= '"#"';
+		o+= 'class="list-group-item">';
 		o += localStorage.key(i)
 		o+= '</a>';
 		}
