@@ -34,7 +34,17 @@ function guardarLocal(name, description, photo) {
   localStorage.setItem(LocalTemporal.name, LocalJSON);
   alert(localStorage.getItem(name));
 }
-
+function mostrarIndex(){
+	var i;
+	var l = localStorage.length;
+	var o ="";
+	for(i=0; i < l;i++){
+		o += '<a href="#" class="list-group-item">';
+		o += localStorage.key(i)
+		o+= '</a>';
+		}
+	return o;
+}
 
 function GuardarCalificacion(localKey, cal, comm) {
   JSONlocal = localStorage.getItem(localKey);
