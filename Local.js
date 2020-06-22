@@ -17,7 +17,8 @@ class localCalificado {
 }
 
 listaLocales = [];
-submittedImage;
+submittedImage ="";
+imagenPath="";
 
 function addImg(img){
     submittedImage = img;
@@ -62,6 +63,8 @@ function submitImage(){
                         
                         console.log(res.data.link);
                         addImg(res.data.link);
+                        imagenPath = getImg();
+
                         $('body').append('<img src="' + getImg() + '" />');
                     },
                     error: function () {
@@ -81,7 +84,7 @@ $(document).ready(function () {
   $("#localForm").submit(function () {
     var name = document.getElementById("localName").value;
     var description = document.getElementById("localDescription").value;
-    var img = document.getElementById("localPhoto").value;
+    var img = imagenPath;
     guardarLocal(name, description, img);
   });
 });
