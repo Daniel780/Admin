@@ -17,14 +17,63 @@ class localCalificado {
 }
 
 listaLocales = [];
-imgs = [];
+submittedImage;
 
 function addImg(img){
-    imgs.push(img);
+    submittedImage = img;
 }
 
-function getImg(num){
-    return imgs[num];
+function getImg(){
+    return submittedImage;
+}
+
+function submitImage(){
+    $("document").ready(function () {
+
+        $('input[type=file]').on("change", function () {
+
+            var $files = $(this).get(0).files;
+
+            if ($files.length) {
+
+                // Replace ctrlq with your own API key
+                var apiUrl = 'https://api.imgur.com/3/image';
+                var apiKey = 'f852841efee7f2a';
+
+                var formData = new FormData();
+                formData.append("image", $files[0]);
+
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": apiUrl,
+                    "method": "POST",
+                    "datatype": "json",
+                    "headers": {
+                        "Authorization": "Client-ID " + apiKey
+                    },
+                    "processData": false,
+                    "contentType": false,
+                    "data": formData,
+                    beforeSend: function (xhr) {
+                        console.log("Uploading");
+                    },
+                    success: function (res) {
+                        
+                        console.log(res.data.link);
+                        addImg(res.data.link);
+                        $('body').append('<img src="' + getImg() + '" />');
+                    },
+                    error: function () {
+                        alert("Failed");
+                    }
+                }
+                $.ajax(settings).done(function (response) {
+                    console.log("Done");
+                });
+            }
+        });
+    });
 }
 
 //Metodo que recibe los elementos del Form local
