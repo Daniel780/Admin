@@ -112,12 +112,20 @@ function mostrarIndex(){
 	return o;
 }
 
+function getImagen(indice){
+	var nombre = " ";
+	nombre = localStorage.key(indice);
+	var d = JSON.parse(localStorage.getItem(nombre));
+	return d.img;
+}
+
 function getDescription(indice){
 	var nombre = " ";
 	nombre = localStorage.key(indice);
 	var d = JSON.parse(localStorage.getItem(nombre));
 	return d.description;
 }
+
 
 function getName(indice){
 	return localStorage.key(indice);

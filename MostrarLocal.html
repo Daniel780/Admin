@@ -90,7 +90,8 @@
 			 <div class="col-sm-4">
 				<form id = "demo"></form>
 					<script>
-						document.getElementById("demo").innerHTML = getImg(getParameterByName('indice'));
+						
+						document.getElementById("demo").innerHTML = '<img src="' + getImagen(getParameterByName('indice')) + '" />';
 					</script>
 			 </div>
 		</div>
