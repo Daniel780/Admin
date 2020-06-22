@@ -62,15 +62,28 @@
 			
 				<div class="card" style="width: 20rem;">
 					<div class="card-body">
-				
+					<script> 
+					function getParameterByName(name, url) {
+					if (!url) url = window.location.href;
+					name = name.replace(/[\[\]]/g, '\\$&');
+					var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+					if (!results[2]) return '';
+					return decodeURIComponent(results[2].replace(/\+/g, ' '));
+					}
+
+						var indice = getParameterByName('indice');
+						</script>
+						
 					<h5 class="card-title"><form id = "demo2"></form>
 						<script>
-						document.getElementById("demo2").innerHTML = getName(0);
+						document.getElementById("demo2").innerHTML = getName(getParameterByName('indice'));;
 						</script></h5>
 				
 					<p class="card-text"><form id = "demo3"></form>
 						<script>
-						document.getElementById("demo3").innerHTML = getDescription(0);
+						document.getElementById("demo3").innerHTML = getDescription(getParameterByName('indice'));
 						</script></p>
 					</div>
 			
@@ -84,7 +97,7 @@
 			 <div class="col-sm-4">
 				<form id = "demo"></form>
 					<script>
-						document.getElementById("demo").innerHTML = getImg(0);
+						document.getElementById("demo").innerHTML = getImg(getParameterByName('indice'));
 					</script>
 			 </div>
 		</div>

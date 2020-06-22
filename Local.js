@@ -50,12 +50,18 @@ function mostrarIndex(){
 	var o ="";
 	for(i=0; i < l;i++){
 		o += '<a href=';
-		o+= '"#"';
+		o+= '"MostrarLocal.html?indice=';
+		o+= i;
+		o+= '"id = "MostrarLocal"'
 		o+= 'class="list-group-item">';
 		o += localStorage.key(i)
 		o+= '</a>';
 		}
 	return o;
+}
+
+function getName(indice){
+	return localStorage.key(indice);
 }
 
 function GuardarCalificacion(localKey, cal, comm) {
