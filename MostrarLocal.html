@@ -47,15 +47,10 @@
 <script type="text/javascript" src="Local.js"></script>
 
 <!-- Page Content -->
-	<div class="container">
-		<h1> Local </h1>
+ <div class="container">
+	<h1 class="my-4">Local</h1>
 	
-		<div class="row">
-			<div class="col-sm-4">
-			
-				<div class="card" style="width: 20rem;">
-					<div class="card-body">
-					<script> 
+		<script> 
 					function getParameterByName(name, url) {
 					if (!url) url = window.location.href;
 					name = name.replace(/[\[\]]/g, '\\$&');
@@ -68,48 +63,47 @@
 
 						var indice = getParameterByName('indice');
 						</script>
-						
-					<h5 class="card-title"><form id = "demo2"></form>
+	
+		<div class="row">
+			
+			<div class="container p-3 my-3 border">
+			
+				<h1> <form id = "demo2"></form>
 						<script>
 						document.getElementById("demo2").innerHTML = getName(getParameterByName('indice'));;
-						</script></h5>
-				
-					<p class="card-text"><form id = "demo3"></form>
+						</script>
+				</h1>
+					
+				<p><form id = "demo3"></form>
 						<script>
 						document.getElementById("demo3").innerHTML = getDescription(getParameterByName('indice'));
-						</script></p>
+						</script>
+				</p>
+					<!-- Calificación -->
+				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+				
 					</div>
-			
-					<div class="card-footer"> <!-- Calificacion -->
-						<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-					
-				</div>
-			</div>
 			<!-- Imagen -->
-			 <div class="col-sm-4">
+			
+			<div class="container p-3 my-3 border">
 				<form id = "demo"></form>
 					<script>
 						
 						document.getElementById("demo").innerHTML = '<img src="' + getImagen(getParameterByName('indice')) + '" />';
 					</script>
-			 </div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-			</div>
-		</div>
-	</div>
+	 </div>
 	
-	<div >
+	<div class="container p-3 my-3 border">
 		<form id="LocalCalForm" class="text-center border border-light p-5">
-			<label for="quantity">Quantity (between 1 and 5):</label>
+			<label for="quantity">Calificaci&oacute;n entre 1 y 5:</label>
 			<input id="LocalCal" type="number" class="form-control" min="1" max="5">
 			<label> Comentario </label>
 			<textarea id="localComentario" class="form-control" required></textarea>
 			</br>
 			<input type="submit">
 		</form>
+	</div>
+	</div>
 	</div>
 
 	 <!-- Footer -->
