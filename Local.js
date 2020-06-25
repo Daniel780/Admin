@@ -3,17 +3,14 @@ class local {
     this.name = name;
     this.description = description;
     this.img = image;
+    this.cal = [];
+    this.comm = [];
   }
 }
 
-class localCalificado {
-  constructor(name, description, image, cal, comm) {
-    this.name = name;
-    this.description = description;
-    this.img = image;
-    this.cal = cal;
-    this.comm = comm;
-  }
+function addCal(local,cal,comm){
+  local.cal.push(cal);
+  local.comm.push(comm);
 }
 
 listaLocales = [];
@@ -134,8 +131,8 @@ function getName(indice){
 function GuardarCalificacion(localKey, cal, comm) {
   JSONlocal = localStorage.getItem(localKey);
   localTemp = JSON.parse(JSONlocal);
-  localCal = new localCalificado(localTemp.name, localTemp.description, localTemp.img, cal, comm);
-  JSONlocal = JSON.stringify(localCal);
+  addCal(localTemp,cal,comm);
+  JSONlocal = JSON.stringify(localTemp);
   localStorage.setItem(localKey,JSONlocal);
   alert(localStorage.getItem(localKey));
 
