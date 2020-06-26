@@ -91,7 +91,6 @@ function guardarLocal(name, description, photo) {
   var LocalTemporal = new local(name, description, photo);
   var LocalJSON = JSON.stringify(LocalTemporal);
   localStorage.setItem(LocalTemporal.name, LocalJSON);
-  alert(localStorage.getItem(name));
 }
 function mostrarIndex() {
   var i;
@@ -146,7 +145,6 @@ function GuardarCalificacion(localKey, cal, comm) {
   addCal(localTemp, cal, comm);
   JSONlocal = JSON.stringify(localTemp);
   localStorage.setItem(localKey, JSONlocal);
-  alert(localStorage.getItem(localKey));
 
 }
 
