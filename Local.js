@@ -128,6 +128,18 @@ function getName(indice){
 	return localStorage.key(indice);
 }
 
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, '\\$&');
+		var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+		results = regex.exec(url);
+		if (!results) return null;
+			if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+						
+
 function GuardarCalificacion(localKey, cal, comm) {
   JSONlocal = localStorage.getItem(localKey);
   localTemp = JSON.parse(JSONlocal);
@@ -143,7 +155,7 @@ $(document).ready(function () {
   $("#LocalCalForm").submit(function () {
     var Calification = document.getElementById("LocalCal").value;
     var comment = document.getElementById("localComentario").value;
-    GuardarCalificacion("Camilo", Calification, comment);
+    GuardarCalificacion(getParameterByName('indice'), Calification, comment);
   });
 });
 
