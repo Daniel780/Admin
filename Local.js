@@ -153,7 +153,7 @@ $(document).ready(function () {
   $("#LocalCalForm").submit(function () {
     var Calification = document.getElementById("LocalCal").value;
     var comment = document.getElementById("localComentario").value;
-    GuardarCalificacion(document.getElementById("demo2").innerHTML, Calification, comment);
+    GuardarCalificacion(document.getElementById("Name").innerHTML, Calification, comment);
   });
 });
 
