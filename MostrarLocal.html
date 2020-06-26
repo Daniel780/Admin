@@ -1,148 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-        <title>Mostrar Local</title>
-    
-        <!-- CSS only -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
-        <!-- JS, Popper.js, and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-            crossorigin="anonymous"></script>
+	<title>Mostrar Local</title>
 
-		<meta charset='utf-8'>
-		<style>
-			.holder {
-				
-				display: flex
-			}
-			.holder img {
-	
-				flex-basis:30%;
-				max-height: 200px;
-				max-width: 200px;
-				object-fit: cover;
-				border: 3px solid gray;
-			}
-			.right {
-				
-				text-align: Center;
-				flex-basis:30%;
-				border: 3px solid gray;
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-			}
-		</style>
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<meta charset='utf-8'>
+	<style>
+		.holder {
+
+			display: flex
+		}
+
+		.holder img {
+
+			flex-basis: 30%;
+			max-height: 200px;
+			max-width: 200px;
+			object-fit: cover;
+			border: 3px solid gray;
+		}
+
+		.right {
+
+			text-align: Center;
+			flex-basis: 30%;
+			border: 3px solid gray;
+
+		}
+
+		.footer {
+			bottom: 0;
+			width: 100%;
+		}
+
+		.cal{
+		}
+	</style>
 
 
-    
+
 </head>
 
 
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand" href="Home.html">FoodSearch</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item active">
-				<a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
-			</li>
-			 <li class="nav-item active">
-        <a class="nav-link" href="CrearLocal.html">Crear Local <span class="sr-only">(current)</span></a>
-      </li>
-		</ul>
-	</div>
-</nav>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="Home.html">FoodSearch</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="CrearLocal.html">Crear Local <span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 
-<script type="text/javascript" src="Local.js"></script>
+	<script type="text/javascript" src="Local.js"></script>
 
-<!-- Page Content -->
- <div class="container">
-		<script> 
-					function getParameterByName(name, url) {
-					if (!url) url = window.location.href;
-					name = name.replace(/[\[\]]/g, '\\$&');
-					var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+	<!-- Page Content -->
+	<div class="container">
+		<script>
+			function getParameterByName(name, url) {
+				if (!url) url = window.location.href;
+				name = name.replace(/[\[\]]/g, '\\$&');
+				var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
 					results = regex.exec(url);
 				if (!results) return null;
-					if (!results[2]) return '';
-					return decodeURIComponent(results[2].replace(/\+/g, ' '));
-					}
+				if (!results[2]) return '';
+				return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
 
-						var indice = getParameterByName('indice');
-						</script>
-	
+			var indice = getParameterByName('indice');
+		</script>
+
 		<div class="row">
-			
+
 			<div class="container p-3 my-3 border">
-			
-				<h1> <form id = "Name"></form>
-						<script>
+
+				<h1>
+					<form id="Name"></form>
+					<script>
 						document.getElementById("Name").innerHTML = getName(getParameterByName('indice'));;
-						</script>
+					</script>
 				</h1>
 
-					<!-- Calificación -->
+				<!-- Calificación -->
 				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				
-					</div>
+
+			</div>
 			<!-- Imagen -->
-			
+
 			<div class="container p-3 my-3 border">
-				<form id = "demo"></form>
-					<script>
-						descrip = getDescription(getParameterByName('indice'));
-						document.getElementById("demo").innerHTML = '<div class=\'holder\'> <img src="' + getImagen(getParameterByName('indice')) + '" /> ' + '<ul id="comment">' + descrip + '</ul>' + '<br style="clear: both;">' + '</div>';
-					</script>					
-	 		</div>
-	
-	<div class="container p-3 my-3 border">
-		<h3>¿Desea calificar el local?</h3>
-		<form id="LocalCalForm" class="text-center border border-light p-5">
-			<label for="quantity">Calificaci&oacute;n entre 1 y 5:</label>
-			<input id="LocalCal" type="number" class="form-control" min="1" max="5">
-		</br>
-			<label> Comentario </label>
-			<textarea id="localComentario" class="form-control" required></textarea>
-			</br>
-			<input type="submit" class="btn btn-success" value="Guardar Calificacion">
-		</form>
-	</div>
-	</div>
+				<form id="demo"></form>
+				<script>
+					descrip = getDescription(getParameterByName('indice'));
+					document.getElementById("demo").innerHTML = '<div class=\'holder\'> <img src="' + getImagen(getParameterByName('indice')) + '" /> ' + '<ul id="comment">' + descrip + '</ul>' + '<br style="clear: both;">' + '</div>';
+				</script>
+			</div>
+
+			<div class="container p-3 my-3 border">
+				<h3>¿Desea calificar el local?</h3>
+				<form id="LocalCalForm" class="text-center border border-light p-5">
+					<label for="quantity">Calificaci&oacute;n entre 1 y 5:</label>
+					<input id="LocalCal" type="number" class="form-control" min="1" max="5">
+					</br>
+					<label> Comentario </label>
+					<textarea id="localComentario" class="form-control" required></textarea>
+					</br>
+					<input type="submit" class="btn btn-success" value="Guardar Calificacion">
+				</form>
+			</div>
+		</div>
 	</div>
 
+<div class="cal">
 	<div class="container p-3 my-3 ">
-		<h3 id="promedioCal">Calificaciones & Comentarios	&emsp; &emsp; &emsp; &emsp; Promedio: </h3>
-		<ul id="ListaCaliciones" class="list-group-flush">		
+		<h3 id="promedioCal">Calificaciones & Comentarios &emsp; &emsp; &emsp; &emsp; Promedio: </h3>
+		<ul id="ListaCaliciones" class="list-group-flush">
 		</ul>
 	</div>
 
-
 	<script> mostrarCalificaciones(document.getElementById("Name").innerHTML);</script>
+</div>
+	
 
-	 <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; FoodSearch 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>		
+	<!-- Footer -->
+	<footer class="footer page-footer py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; FoodSearch 2020</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<script>
+	var $footer = $('.footer');
+	var $aboveFooter = $('.cal');
+	$aboveFooter.css('top', ($footer.css('top') + $aboveFooter.height()) + 'px');
+	</script>
 </body>
-    
+
 </html>
-
-
