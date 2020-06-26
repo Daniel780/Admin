@@ -61,8 +61,6 @@ function submitImage() {
             console.log(res.data.link);
             addImg(res.data.link);
             imagenPath = getImg();
-
-            $('body').append('<img src="' + getImg() + '" />');
           },
           error: function () {
             alert("Failed");
