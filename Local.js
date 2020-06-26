@@ -81,6 +81,8 @@ $(document).ready(function () {
     var description = document.getElementById("localDescription").value;
     var img = imagenPath;
     guardarLocal(name, description, img);
+    alert("Local agregado exitosamente");
+
   });
 });
 
@@ -168,6 +170,9 @@ function mostrarCalificaciones(key) {
       + '<b>' + "Comentario: " + '</b>' + localTemp.comm[i]
       + '</li>';
   }
-  promedio =promedio/localTemp.cal.length;
+  promedio = promedio/localTemp.cal.length;
+  if(localTemp.cal.length == 0){
+    promedio = 0 ;
+  }
   document.getElementById('promedioCal').innerHTML += '<b>' + promedio + '</b>';
 }
