@@ -19,7 +19,31 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
             crossorigin="anonymous"></script>
-    
+
+		<meta charset='utf-8'>
+		<style>
+			.holder {
+				
+				display: flex
+			}
+			.holder img {
+	
+				flex-basis:30%;
+				max-height: 200px;
+				max-width: 200px;
+				object-fit: cover;
+				border: 3px solid gray;
+			}
+			.right {
+				
+				text-align: Center;
+				flex-basis:30%;
+				border: 3px solid gray;
+
+			}
+		</style>
+
+
     
 </head>
 
@@ -48,24 +72,30 @@
 
 <!-- Page Content -->
  <div class="container">
-	<h1 class="my-4">Local</h1>
-	
+		<script> 
+					function getParameterByName(name, url) {
+					if (!url) url = window.location.href;
+					name = name.replace(/[\[\]]/g, '\\$&');
+					var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+					results = regex.exec(url);
+				if (!results) return null;
+					if (!results[2]) return '';
+					return decodeURIComponent(results[2].replace(/\+/g, ' '));
+					}
+
+						var indice = getParameterByName('indice');
+						</script>
 	
 		<div class="row">
 			
 			<div class="container p-3 my-3 border">
 			
-				<h1> <form id = "demo2"></form>
+				<h1> <form id = "Name"></form>
 						<script>
-						document.getElementById("demo2").innerHTML = getName(getParameterByName('indice'));;
+						document.getElementById("Name").innerHTML = getName(getParameterByName('indice'));;
 						</script>
 				</h1>
-					
-				<p><form id = "demo3"></form>
-						<script>
-						document.getElementById("demo3").innerHTML = getDescription(getParameterByName('indice'));
-						</script>
-				</p>
+
 					<!-- Calificación -->
 				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
 				
@@ -75,10 +105,10 @@
 			<div class="container p-3 my-3 border">
 				<form id = "demo"></form>
 					<script>
-						
-						document.getElementById("demo").innerHTML = '<img src="' + getImagen(getParameterByName('indice')) + '" />';
-					</script>
-	 </div>
+						descrip = getDescription(getParameterByName('indice'));
+						document.getElementById("demo").innerHTML = '<div class=\'holder\'> <img src="' + getImagen(getParameterByName('indice')) + '" /> ' + '<ul id="comment">' + descrip + '</ul>' + '<br style="clear: both;">' + '</div>';
+					</script>					
+	 		</div>
 	
 	<div class="container p-3 my-3 border">
 		<form id="LocalCalForm" class="text-center border border-light p-5">
