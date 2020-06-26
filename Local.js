@@ -155,7 +155,7 @@ $(document).ready(function () {
   $("#LocalCalForm").submit(function () {
     var Calification = document.getElementById("LocalCal").value;
     var comment = document.getElementById("localComentario").value;
-    GuardarCalificacion("Camilo", Calification, comment);
+    GuardarCalificacion(document.getElementById("demo2").innerHTML, Calification, comment);
   });
 });
 
