@@ -165,7 +165,7 @@ function mostrarCalificaciones(key) {
     promedio = promedio + parseInt(localTemp.cal[i]);
     document.getElementById('ListaCaliciones').innerHTML +=
       '<li class =\"list-group-item\">'
-      + '<b>' + "Calificacion: " + '</b>' + localTemp.cal[i]
+      + '<b>' + "Calificaci&oacute;n: " + '</b>' + localTemp.cal[i]
       + "</br>"
       + '<b>' + "Comentario: " + '</b>' + localTemp.comm[i]
       + '</li>';
